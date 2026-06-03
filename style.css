@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300,400,600&display=swap");
+
+*::before,
+*::after,
+* {
+  box-sizing: border-box;
+}
+
+* {
+  font: inherit;
+  margin: 0;
+}
+:root {
+  --color-primary-blue-500: hsl(215, 51%, 70%);
+  --color-primary-blueh-500: 215, 51%, 70%;
+  --color-primary-cyan-400: hsl(178, 100%, 50%);
+  --color-neutral-blue-950: hsl(217, 54%, 11%);
+  --color-neutral-blue-900: hsl(216, 50%, 16%);
+  --color-neutral-blue-800: hsl(215, 32%, 27%);
+  --color-neutral-white: hsl(0, 0%, 100%);
+  --color-neutral-blue-hsl-800: 0, 0%, 100%;
+  --color-neutral-blueh-800: hsl(var(--color-neutral-blue-hsl-800));
+  --color-neutral-blue-500: hsl(var(--color-primary-blueh-500));
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+body {
+  font-family: "Outfit", sans-serif;
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  font-size: 17px;
+  color: hsla(var(--color-primary-blueh-500), 0.7);
+  font-weight: 400;
+  background-color: var(--color-neutral-blue-950);
+}
+.container {
+  width: 21rem;
+  background-color: var(--color-neutral-blue-900);
+  padding: 1.3rem;
+  border-radius: 0.8rem;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
+}
+.grid-flow {
+  display: grid;
+  gap: 1.5rem;
+}
+.card-title {
+  color: var(--color-neutral-white);
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.details-card {
+  display: flex;
+  justify-content: space-between;
+}
+.price,
+.date {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 14px;
+}
+.profile-detail {
+  display: flex;
+  font-size: 15px;
+  gap: 0.7rem;
+  padding-bottom: 0.5rem;
+}
+.profile-detail img {
+  width: 2rem;
+}
+.profile-detail span {
+  color: var(--color-neutral-white);
+  font-weight: 400;
+}
+.profile-detail p {
+  align-self: center;
+}
+.divider {
+  height: 1px;
+  background-color: var(--color-neutral-blue-800);
+}
+.price p {
+  color: var(--color-primary-cyan-400);
+}
+.card-title:hover,
+.profile-detail span:hover {
+  color: aqua;
+  cursor: pointer;
+}
+.image:hover {
+  background-color: aqua;
+  cursor: pointer;
+}
+.card {
+  position: relative;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  cursor: pointer;
+}
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: hsl(178 100% 50% / 0.5);
+  display: grid;
+  place-content: center;
+  transition: opacity 0.25s ease;
+  opacity: 0;
+}
+
+.card:hover .overlay {
+  opacity: 1;
+}
+
+.overlay img {
+  width: 3rem;
+}
